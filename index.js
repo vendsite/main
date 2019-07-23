@@ -34,28 +34,32 @@ var Payment = require('./mongo/Payment.js');
 
 // Pages in website
 app.use('/home', (req, res) => {
-    var body = req.body;
-
-    console.log(body.username);
-
-    // User.findOne({
-    //     name: body.username,
-    //     password: body.password
-    // }, (err, foundAdmin) => {
-    //     if (err) {
-    //         res.render('error');
-    //     }
-
-    //     if (foundAdmin) {
-    //         admin = foundAdmin;
-    //         res.render('viewclasses', {
-    //             admin: foundAdmin
-    //         });
-    //     } else {
-    //         res.render('admin_not_found');
-    //     }
-    // });
+    res.render('home');
 });
+
+// app.use('/home', (req, res) => {
+//     var body = req.body;
+
+//     console.log(body.username);
+
+//     // User.findOne({
+//     //     name: body.username,
+//     //     password: body.password
+//     // }, (err, foundAdmin) => {
+//     //     if (err) {
+//     //         res.render('error');
+//     //     }
+
+//     //     if (foundAdmin) {
+//     //         admin = foundAdmin;
+//     //         res.render('viewclasses', {
+//     //             admin: foundAdmin
+//     //         });
+//     //     } else {
+//     //         res.render('admin_not_found');
+//     //     }
+//     // });
+// });
 
 // setting up port
 app.listen(3000, () =>
