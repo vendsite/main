@@ -1,0 +1,171 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+  }
+  
+  
+  ul {
+    text-align: right;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  
+  /*Sizing*/
+  
+  .container {
+    margin: 0 auto;
+  }
+  
+  .spacer {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .main {
+    background-color: #ffc200;
+  }
+  
+  /*Header Section*/
+  
+  .header {
+    padding: 30px 0px 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .header li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .header li a {
+    color: #333;
+    margin:0;
+    border:0px;
+  }
+  
+  /* New Service Form */
+  .newService {
+    margin: auto;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 10%;
+
+  }
+
+  .stepForm {
+    font-size: 1 em;
+    font-family: Oswald;
+    padding: 2%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7%;
+  }
+
+  .stepForm h3 {
+      color: steelblue;
+      font-size: 1 em;
+      font-family: Roboto;
+  }
+
+  .inputName {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .stepForm input, button {
+    width: 97%;
+    padding: 12px;
+    border: 1px solid lightgray; 
+    margin: auto;
+    font-size: 17px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    border-radius: 5px 5px 5px 5px; 
+  }
+
+  .stepForm button {
+    width: 100%;
+    background-color: steelblue;
+    margin-top: 5%;
+  }
+
+  .flexibility{
+      display: flex;
+      flex-direction: row;
+      align-items: left;
+      border: 1px solid green;
+  }
+
+  .flexibility input, p {
+    all: revert; 
+  }
+
+  .flexibility input {
+      background-color: blue;
+  }
+
+  
+
+  span.step {
+    background: #cccccc;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 5px;
+    text-align: center;
+    width: 1.6em; 
+  }
+  
+  /*Footer Section*/
+  .footer {
+    padding: 60px 0px;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .footer h3 {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  
+  .footer p {
+    font-size:12px;
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
+  
+  
+    
+    /* Style the "active" element to highlight the current page */
+    .topnav a.active {
+      background-color: #E0E0E0; 
+      color: white;
+      
+    }
+    
+    /* Style the search box inside the navigation bar */
+    .topnav input[type=text] {
+      float: center;
+      width: 700px; 
+      padding: 12px;
+      border: 0.5px #E8E8E8; 
+      margin-left: 20%; 
+      margin-right: 20%;
+      font-size: 17px;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
+      border-radius: 5px 5px 5px 5px; 
+  
+  
+    }
+    
+   

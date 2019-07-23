@@ -1,0 +1,100 @@
+<!-- file is file:///Users/lianapatel/Documents/Code/Properties/Codecademy/Vend/service.html -->
+<!doctype html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap"   rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="service.css">        
+  <script>
+      function showStepOne() {
+        document.getElementById('stepOne').style.display='block';
+        document.getElementById('stepTwo').style.display='none';
+        document.getElementById('stepThree').style.display='none' 
+      }
+
+      function showStepTwo() {
+        document.getElementById('stepOne').style.display='none';
+        document.getElementById('stepTwo').style.display='block';
+        document.getElementById('stepThree').style.display='none' 
+      }
+
+      function showStepThree() {
+        document.getElementById('stepOne').style.display='none';
+        document.getElementById('stepTwo').style.display='none';
+        document.getElementById('stepThree').style.display='block' 
+      }
+  </script>
+</head>
+<body>
+  <div class="header">
+    
+      <h1>Vend.</h1>
+      <ul>
+        <li><a href="#expertise">Create a Service </a></li>
+        <li><a href="3">Our Team </a></li>
+        <li><a href="#footer">Contact Us </a></li>
+      </ul>
+
+  </div>
+  
+  <div class="newService">
+
+    <div class="stepForm">
+        <h2 onclick="showStepOne()"><span class="step">1</span>About You</h2>
+        <div id="stepOne" style="display: block">
+            <h3>We're excited to get you started.</h3>
+            <div class="inputName">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Phone Number">
+            <p> Let's add your profile picture below: </p>
+            <form action="/action_page.php">
+                <input type="file" name="propic" accept="image/*">
+            </form>
+            <button onclick="showStepTwo()">NEXT</button>
+        </div>
+    </div>
+
+    <div class="stepForm">
+        <h2 onclick="showStepTwo()"><span class="step">2</span>Your Availability</h2>
+        <div id="stepTwo" style="display: none">
+            <h3>Tell us when you'll be free.</h3>
+            <input type="date" placeholder="Start Date: MM/DD/YYYY">
+            <input type="date" placeholder="End Date: MM/DD/YYYY">
+            <button onclick="showStepThree()">NEXT</button>
+        </div>
+    </div>
+
+    <div class="stepForm">
+        <h2 onclick="showStepThree()"><span class="step">3</span>Your Service</h2>
+        <div id="stepThree" style="display: none">
+            <h3>Tell us more about your offering.</h3>
+            <input type="text" placeholder="Keywords e.g. photography, hair styling, iPhone repair, sewing">
+            <input type="text" placeholder="Description: Tell customers some more about your skills and expertise">
+            <input type="text" placeholder="Hourly Price">
+            <button>SUBMIT</button>
+        </div>
+    </div>
+
+    <button type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to display Date and Time.</button>
+
+    <p id="demo"></p>
+
+
+
+  </div>
+
+ 
+
+
+  <div class="footer">
+    <h3>Headlines.</h3>
+    <p>1000 7th Avenue</p>
+    <p>New York, NY</p>
+    <p>(484) 192 - 8372</p>
+  </div>
+</body>
+</html>
