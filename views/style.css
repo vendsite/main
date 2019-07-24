@@ -353,18 +353,3 @@ img {
 .form-container .btn:hover {
   opacity: 1;
 }
-
-.overlay {
-  position:fixed;
-  display:none; 
-
-  /* color with alpha channel */
-  background-color: rgba(0, 0, 0, 0.4); /* 0.7 = 70% opacity */
-
-  /* stretch to screen edges */
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  filter: blur(10px);
-}
