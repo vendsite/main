@@ -31,13 +31,14 @@ var $ = require("jquery");
 var User = require('./mongo/User.js');
 var Service = require('./mongo/Service.js');
 var Payment = require('./mongo/Payment.js');
+var Interest = require('./mongo/Interest.js');
 
 // Pages in website
 app.use('/home', (req, res) => {
     res.render('home');
 });
 
-app.use('service', (req, res) => {
+app.use('/service', (req, res) => {
     res.render('service');
     console.log('hi');
 });
@@ -53,6 +54,23 @@ app.use('/newuser', (req, res) => {
     });
 
     newUser.save(function (err) {
+        if (err) {
+            res.render('error');
+        } else {
+            res.render('home');
+        }
+    });
+});
+
+app.use('/newtransaction', (req, res) => {
+    var body = req.body;
+
+    var newInterest = new Interest({
+        email: body.email,
+        activity: 'TESTING'
+    });
+
+    newInterest.save(function (err) {
         if (err) {
             res.render('error');
         } else {
