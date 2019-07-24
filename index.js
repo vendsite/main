@@ -37,6 +37,38 @@ app.use('/home', (req, res) => {
     res.render('home');
 });
 
+app.use('service', (req, res) => {
+    res.render('service');
+    console.log('hi');
+});
+
+app.use('/newuser', (req, res) => {
+    var body = req.body;
+
+    console.log("hello" + body.firstname);
+
+    var newUser = new User({
+        firstName: body.firstname,
+        lastName: body.lastname,
+        email: body.email,
+        phoneNumber: body.phonenumber,
+        activites: []
+    });
+
+    newUser.save((err) => {
+        if (err) {
+            res.render('error');
+            console.log('error in creatig new user');
+        }
+    });
+});
+
+app.use('/newservice', (req, res) => {
+    var body = req.body;
+
+});
+
+
 // app.use('/home', (req, res) => {
 //     var body = req.body;
 

@@ -1,4 +1,5 @@
 <!-- file is file:///Users/lianapatel/Documents/Code/Properties/Codecademy/Vend/service.html -->
+
 <!doctype html>
 <html>
 
@@ -44,12 +45,17 @@
       <h2 onclick="showStepOne()"><span class="step">1</span>About You</h2>
       <div id="stepOne" style="display: block">
         <h3>We're excited to get you started.</h3>
-        <div class="inputName">
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Last Name">
-        </div>
-        <input type="text" placeholder="Email">
-        <input type="text" placeholder="Phone Number">
+
+        <form action="/newuser" method="post">
+          <div class="inputName">
+            <input type="text" name="firstname" placeholder="First Name">
+            <input type="text" name="lastname" placeholder="Last Name">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="phonenumber" placeholder="Phone Number">
+          </div>
+
+        </form>
+
         <p> Let's add your profile picture below: </p>
         <form action="/action_page.php">
           <input type="file" name="propic" accept="image/*">
@@ -87,8 +93,6 @@
 
 
   </div>
-
-
 
 
   <div class="footer">
