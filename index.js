@@ -35,12 +35,40 @@ var Interest = require('./mongo/Interest.js');
 
 // Pages in website
 app.use('/home', (req, res) => {
-    res.render('home');
+    Service.find((err, services) => {
+        if (err) {
+            res.type('html').status(500);
+            res.send('Error: ' + err);
+        } else if (services.length == 0) {
+            res.type('html').status(200);
+            res.send('There are no services');
+        } else {
+            // var set2 = new Set()
+            // questions.forEach(function (question) {
+            //     if (question.course == req.params.class) {
+            //         set2.add(question)
+            //     }
+            // });
+            services.forEach(s => {
+                console.log(s.toString());
+            });
+
+            console.log(services.toString());
+
+            res.render('home', {
+                serviceList: services
+            });
+            // console.log(req.params.class);
+            // res.render('questions', {
+            //     questions: set2,
+            //     course: req.params.class
+            // });
+        }
+    });
 });
 
 app.use('/service', (req, res) => {
     res.render('service');
-    console.log('hi');
 });
 
 app.use('/newuser', (req, res) => {
@@ -57,7 +85,25 @@ app.use('/newuser', (req, res) => {
         if (err) {
             res.render('error');
         } else {
-            res.render('home');
+            res.render('service');
+        }
+    });
+});
+
+app.use('/newservice', (req, res) => {
+    var body = req.body;
+
+    var newService = new Service({
+        keywords: body.keywords.split(" "),
+        description: body.description,
+        rate: body.rate,
+    });
+
+    newService.save(function (err) {
+        if (err) {
+            res.render('error');
+        } else {
+            res.render('service');
         }
     });
 });
@@ -77,11 +123,6 @@ app.use('/newtransaction', (req, res) => {
             res.render('home');
         }
     });
-});
-
-app.use('/newservice', (req, res) => {
-    var body = req.body;
-
 });
 
 

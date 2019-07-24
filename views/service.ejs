@@ -52,8 +52,8 @@
             <input type="text" name="lastname" placeholder="Last Name">
             <input type="text" name="email" placeholder="Email">
             <input type="text" name="phonenumber" placeholder="Phone Number">
+            <input class="btn-primary" type="submit" value="Submit">
           </div>
-
         </form>
 
         <p> Let's add your profile picture below: </p>
@@ -77,11 +77,16 @@
     <div class="stepForm">
       <h2 onclick="showStepThree()"><span class="step">3</span>Your Service</h2>
       <div id="stepThree" style="display: none">
+
         <h3>Tell us more about your offering.</h3>
-        <input type="text" placeholder="Keywords e.g. photography, hair styling, iPhone repair, sewing">
-        <input type="text" placeholder="Description: Tell customers some more about your skills and expertise">
-        <input type="text" placeholder="Hourly Price">
-        <button>SUBMIT</button>
+        <form action="/newservice" method="post">
+          <input type="text" name="keywords"
+            placeholder="Keywords e.g. photography, hair styling, iPhone repair, sewing">
+          <input type="text" name="description"
+            placeholder="Description: Tell customers some more about your skills and expertise">
+          <input type="text" name="rate" placeholder="Hourly Price">
+          <button>SUBMIT</button>
+        </form>
       </div>
     </div>
 
@@ -89,8 +94,6 @@
       Click me to display Date and Time.</button>
 
     <p id="demo"></p>
-
-
 
   </div>
 

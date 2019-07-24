@@ -26,6 +26,59 @@
     </div>
   </div>
 
+  <% serviceList.forEach(function(service) {%>
+  <div class="listing">
+    <div class="photo">
+      <img src="https://pmcspy.files.wordpress.com/2018/03/shutterstock_638274094.jpg?w=958&h=599&crop=1"
+        alt="A image" />
+    </div>
+    <span class="holder">
+      <div class="rightBox">
+        <div class="mainText">
+          <div class="mainTitle">
+            <h5> Photography Services </h5>
+          </div>
+          <span class="description">
+            <h3><%= service.description%></h3>
+          </span>
+        </div>
+        <div class="profileMain">
+          <div class="profile">
+            <img src="https://i.redd.it/6onq25y0sh311.jpg" alt="A image" />
+          </div>
+          <div class="profileName">
+            <h6> Anderson Smith </h6>
+          </div>
+        </div>
+      </div>
+      <div class="bottomBar">
+        <div class="price">
+          <h4> $<%= service.rate%>/hr </h4>
+        </div>
+        <div class="flexibility">
+          <h4> Flexible </h4>
+        </div>
+        <div class="book">
+          <h4 onclick="openForm()"> Book Now </h4>
+          <div class="form-popup" id="myForm">
+            <form action="/newtransaction" class="form-container" method="post">
+              <h1>Type in your e-mail to contact Yan. </h1>
+
+              <label for="email"><b>Email: </b></label>
+              <input type="text" placeholder="Enter E-mail" name="email" required>
+
+              <!--<input type="hidden" name="Course" value=<%= %>><br><br> PUT ACTIVITY INFO HERE-->
+
+              <button type="submit" class="btn">Submit Email</button>
+              <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </span>
+  </div>
+  <% }) %>
+
   <div class="listing">
     <div class="photo">
       <img src="https://pmcspy.files.wordpress.com/2018/03/shutterstock_638274094.jpg?w=958&h=599&crop=1"
@@ -190,16 +243,6 @@
       document.getElementById("myForm").style.display = "none";
     }
   </script>
-
-  <form action="/newuser" method="post">
-    <div class="inputName">
-      <input type="text" name="firstname" placeholder="First Name">
-      <input type="text" name="lastname" placeholder="Last Name">
-      <input type="text" name="email" placeholder="Email">
-      <input type="text" name="phonenumber" placeholder="Phone Number">
-      <input class="btn-primary" type="submit" value="Submit">
-    </div>
-  </form>
 
 </body>
 
