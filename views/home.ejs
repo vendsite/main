@@ -60,9 +60,20 @@
         <div class="flexibility">
           <h4> Flexible </h4>
         </div>
-        <div class="book">
-          <h4> Book Now </h4>
-        </div>
+        <div class="book" >
+            <h4 onclick="openForm()"> Book Now </h4>
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <h1>Type in your e-mail to contact Yan. </h1>
+              
+                  <label for="email"><b>Email:    </b></label>
+                  <input type="text" placeholder="Enter E-mail" name="email" required>
+              
+                  <button type="submit" class="btn">Submit Email</button>
+                  <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+              </div>
+          </div>
       </div>
     </span>
   </div>
