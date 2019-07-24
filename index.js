@@ -12,6 +12,8 @@ app.use('/views', express.static('views'));
 
 var http = require('http');
 
+
+asfsadf
 // Window configuration for jquery
 var jsdom = require("jsdom");
 const {
