@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://monal:Flower123!@cluster0-yzkhe.mongodb.net/Vend');
+mongoose.connect('mongodb+srv://monal:vendfend@cluster0-yzkhe.mongodb.net/Vend');
 
 var Schema = mongoose.Schema;
 

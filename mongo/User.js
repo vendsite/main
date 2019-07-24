@@ -1,17 +1,10 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://monal:Flower123!@cluster0-yzkhe.mongodb.net/Vend');
+mongoose.connect('mongodb+srv://monal:vendfend@cluster0-yzkhe.mongodb.net/Vend');
 
 var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
-    username: {
-        type: String,
-        unique: true
-    },
-    password: {
-        type: String,
-    },
     firstName: {
         type: String,
         required: true
@@ -27,10 +20,7 @@ var userSchema = new Schema({
     phoneNumber: {
         type: Number,
         required: true
-    },
-    activites: [{
-        type: String
-    }]
+    }
 });
 
 // export schemas

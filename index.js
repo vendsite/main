@@ -45,20 +45,18 @@ app.use('service', (req, res) => {
 app.use('/newuser', (req, res) => {
     var body = req.body;
 
-    console.log("hello" + body.firstname);
-
     var newUser = new User({
         firstName: body.firstname,
         lastName: body.lastname,
         email: body.email,
         phoneNumber: body.phonenumber,
-        activites: []
     });
 
-    newUser.save((err) => {
+    newUser.save(function (err) {
         if (err) {
             res.render('error');
-            console.log('error in creatig new user');
+        } else {
+            res.render('home');
         }
     });
 });
